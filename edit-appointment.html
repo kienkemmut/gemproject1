@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit Appointment</title>
-    <link rel="stylesheet" href="lib/bootstrap-4/css/bootstrap.css">
-    <link rel="stylesheet" href="lib/bootstrap-4/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="lib/bootstrap-4/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="lib/bootstrap-4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-4/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-4/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="lib/fontawesome-5/web-fonts-with-css/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="lib/bootstrap-4/css/style.css">
-    <style>
+    <link rel="stylesheet" href="lib/bootstrap-4/css/side.css">
 
+    <script type="text/javascript" src="lib/bootstrap-4/js/jquery-3.3.1.min.js  "></script>
+    <!-- Bootstrap Date-Picker Plugin -->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap-4/js/bootstrap.min.js  "></script>
 
-    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
@@ -19,151 +25,170 @@
             <img src="images/navi_logo.gif">
         </div>
         <div>
-            <a class="navbar-toggler-icon" href="#"></a>
+            <a class="navbar-toggler-icon" data-toggle="collapse"  href="#demo"></a>
         </div>
         <div class="col-md-3 text-danger">Edit reservation</div>
     </nav>
     <div class="container-fluid">
-        <div class="side">
+        <div class="aside collapse show" id="demo">
             <div>
                 <a href="login.html"> <img src="images/login.gif"></a>
             </div>
-            <div class="image">
-                <a href="appointments.html"><img src="images/schedule.gif"></a>
-            </div>
-            <div class="image">
-                <a href="edit-appointment.html"><img src="images/reserve.gif"></a>
-            </div>
-            <div class="image">
-                <a href="setup.html"><img src="images/setup.gif"></a>
-            </div>
-            <div class="image">
-                <a href="create-appointment.html"><img src="images/room.gif"></a>
-            </div>
-            <div class="image">
-                <a href="page-not-found.html"><img src="images/manual_icon_white.gif"></a>
-            </div>
-            <div class="image" style="margin-top: 50px;">
-                <a href="#top"><img src="images/top1.gif"></a>
-            </div>
-            <div class="image" style="margin-bottom: 15px;">
-                <a href="logout.html"><img src="images/logout.gif"></a>
-            </div>
-            <div>
-                <label>EN JP</label>
-            </div>
+            <ul class="menu">
+                <li class="css-sprite-schedule">
+                    <a href="appointments.html"></a>
+                </li>
+                <li class="css-sprite-reserve">
+                    <a href="edit-appointment.html"></a>
+                </li>
+                <li class="css-sprite-setup">
+                    <a href="setup.html"></a>
+                </li>
+                <li class="css-sprite-room">
+                    <a href="create-appointment.html"></a>
+                </li>
+                <li class="css-sprite-manual">
+                    <a href="page-not-found.html"></a>
+                </li>
+                <li class="mt-lg-3 css-sprite-top" >
+                    <a href="#top"></a>
+                </li>
+                <li class="css-sprite-logout">
+                    <a href="logout.html"></a>
+                </li>
+                <li  class="mr-4">
+                    <label>EN JP</label>
+                </li>
+            </ul>
+
         </div>
-        <div class="row">
-            <main class="col-md-7" style="margin-top: 15px; margin-left: 205px; margin-bottom: 10px">
-                <div class="wrapper">
-                    <div class="col-sm-12">
-                        <button type="button" class="col-sm-3 btn btn-primary">Reservation Information</button>
-                        <button type="button" class="col-sm-2 btn btn-link text-white">List participants</button>
-                        <button type="button" class="col-sm-2 btn btn-link text-white">Documents</button>
-                        <button type="button" class="col-sm-2 btn btn-link text-white">Email</button>
-                        <button type="button" class="col-sm-2 btn btn-link text-white">Back to list</button>
 
-                    </div>
-                </div>
-            </main>
-        </div>
-        <div class="row">
-            <main class="col-md-7" style="margin-top: 15px; margin-left: 220px">
-                <div class="wrapper">
 
-                    <div class="card" style="margin-bottom: 20px; color: white">
-                        <div class="card ">
-                            <form class="form-group" style="margin: 10px">
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Conference Room</label>
-                                    <div class="col-sm-10">
-                                        <select class="custom-select">
-                                            <option></option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                        </select>
+        <div class="content-wrapper">
+            <div class="row">
+                <main class="col-md-8 mt-2 mb-2">
+                    <div class="wrapper">
+                        <div class="col-sm-12">
+                            <div class="row text-center">
+                                <button type="button" class="col-sm-3 btn btn-primary">Reservation Information</button>
+                                <button type="button" class="col-sm-3 btn btn-link text-white">List participants</button>
+                                <button type="button" class="col-sm-2 btn btn-link text-white">Documents</button>
+                                <button type="button" class="col-sm-2 btn btn-link text-white">Email</button>
+                                <button type="button" class="col-sm-2 btn btn-link text-white">Back to list</button>
+                            </div>
 
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Password</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" >
-                                    </div>
-                                </div>
-                                <div class="form-group checkbox row">
-                                    <label class="col-sm-2">Mode</label>
-                                    <div class="col-sm-2">
-                                        <input type="radio" value="1">
-                                        <label class="form-check-label">Chairman mode</label>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <input type="radio" value="2">
-                                        <label class="form-check-label">Simultaneous mode</label>
-                                    </div>
-                                </div>
-                                <div class="form-group row" >
-                                    <label class="col-sm-2 col-form-label">Call Conference</label>
-                                    <div class="col-sm-10">
-                                        <button type="button" class="col-sm-3 btn btn-secondary" style="margin-right: 70px" >30 minutes from now</button>
-                                        <button type="button" class="col-sm-3 btn btn-secondary" style="margin-right: 70px"  >1 hour from now</button>
-                                        <button type="button" class="col-sm-3 btn btn-secondary" style="margin-right: 70px"  >3 hour from now</button>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="control-label col-md-2 col-sm-12 col-xs-12" for="start-date">Start Date</label>
-                                    <div class="col-md-10 col-sm-12 col-xs-12" >
-                                        <div class="input-group">
-                                            <input type="text" class="form-control datetimepicker" placeholder="" name="start-date" id="start-date">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text style-div-icon"><i class="far fa-calendar-alt"></i></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="control-label col-md-2 col-sm-12 col-xs-12" for="start-date">End Date</label>
-                                    <div class="col-md-10 col-sm-12 col-xs-12" >
-                                        <div class="input-group">
-                                            <input type="text" class="form-control datetimepicker" placeholder="" name="start-date" id="start-date">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text style-div-icon"><i class="far fa-calendar-alt"></i></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Agenda</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" >
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Notice</label>
-                                    <div class="col-sm-10">
-                                        <textarea class="form-control" rows="5" id="comment"></textarea>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-10">
-                                        <button type="button" class="btn btn-success">Save</button>
-                                    </div>
-                                </div>
-                            </form>
+
                         </div>
                     </div>
+                </main>
+            </div>
+            <div class="row">
+                <main class="col-md-8">
+                    <div class="wrapper">
 
-                </div>
-            </main>
+                        <div class="card" style="margin-bottom: 20px; color: white">
+                            <div class="card ">
+                                <form class="form-group" style="margin: 10px">
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Conference Room</label>
+                                        <div class="col-sm-10">
+                                            <select class="custom-select">
+                                                <option></option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                            </select>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Password</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" >
+                                        </div>
+                                    </div>
+                                    <div class="form-group checkbox row">
+                                        <label class="col-sm-2">Mode</label>
+                                        <div class="col-sm-2">
+                                            <input type="radio" value="1">
+                                            <label class="form-check-label">Chairman mode</label>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <input type="radio" value="2">
+                                            <label class="form-check-label">Simultaneous mode</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row" >
+                                        <label class="col-sm-2 col-form-label">Call Conference</label>
+                                        <div class="col-sm-10">
+
+                                                <button type="button" class="col-sm-3 btn btn-secondary mr-5"  >30 minutes from now</button>
+                                                <button type="button" class="col-sm-3 btn btn-secondary mr-5"  >1 hour from now</button>
+                                                <button type="button" class="col-sm-3 btn btn-secondary mr-5"  >3 hour from now</button>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-2 col-sm-12 col-xs-12" >Start Date</label>
+                                        <div class="col-md-10 col-sm-12 col-xs-12" >
+                                            <div class="input-group">
+                                                <input type="text" class="form-control datetimepicker" placeholder="" name="start-date" >
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text style-div-icon"><i class="far fa-calendar-alt"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-2 col-sm-12 col-xs-12">End Date</label>
+                                        <div class="col-md-10 col-sm-12 col-xs-12" >
+                                            <div class="input-group">
+                                                <input type="text" class="form-control datetimepicker" placeholder="" name="start-date" >
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text style-div-icon"><i class="far fa-calendar-alt"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Agenda</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" >
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Notice</label>
+                                        <div class="col-sm-10">
+                                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-12">
+                                            <button type="button" class="btn btn-success float-right">Save</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </main>
+            </div>
         </div>
 
     </div>
 
-
-
-
-
-
 </body>
+
+<script>
+    $(document).ready(function() {
+        var date_input = $('.datetimepicker'); //our date input has the name "date"
+        date_input.datepicker({
+            format: 'mm/dd/yyyy',
+            todayHighlight: true,
+            autoclose: true,
+        })
+    })
+</script>
 </html>

@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    <link rel="stylesheet" href="lib/bootstrap-4/css/bootstrap.css">
-    <link rel="stylesheet" href="lib/bootstrap-4/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="lib/bootstrap-4/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="lib/bootstrap-4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-4/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-4/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="lib/fontawesome-5/web-fonts-with-css/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="lib/bootstrap-4/css/style.css">
-    <style>
+    <link rel="stylesheet" href="lib/bootstrap-4/css/side.css">
+
+    <script type="text/javascript" src="lib/bootstrap-4/js/jquery-3.3.1.min.js  "></script>
+    <!-- Bootstrap Date-Picker Plugin -->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap-4/js/bootstrap.min.js  "></script>
 
 
-    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
@@ -19,43 +26,46 @@
             <img src="images/navi_logo.gif">
         </div>
         <div>
-            <a class="navbar-toggler-icon" href="#"></a>
+            <a class="navbar-toggler-icon" data-toggle="collapse"  href="#demo" ></a>
         </div>
         <div class="col-md-3 col-sm-12 col-xs-12 text-danger">Home</div>
     </nav>
     <div class="container-fluid">
         <div class="row">
-            <div class="side">
+            <div class="aside collapse show" id="demo">
                 <div>
-                   <a href="login.html"> <img src="images/login.gif"></a>
+                    <a href="login.html"> <img src="images/login.gif"></a>
                 </div>
-                <div class="image">
-                    <a href="appointments.html"><img src="images/schedule.gif"></a>
-                </div>
-                <div class="image">
-                    <a href="edit-appointment.html"><img src="images/reserve.gif"></a>
-                </div>
-                <div class="image">
-                    <a href="setup.html"><img src="images/setup.gif"></a>
-                </div>
-                <div class="image">
-                    <a href="create-appointment.html"><img src="images/room.gif"></a>
-                </div>
-                <div class="image">
-                    <a href="page-not-found.html"><img src="images/manual_icon_white.gif"></a>
-                </div>
-                <div class="image" style="margin-top: 50px;">
-                    <a href="#top"><img src="images/top1.gif"></a>
-                </div>
-                <div class="image" style="margin-bottom: 15px;">
-                    <a href="logout.html"><img src="images/logout.gif"></a>
-                </div>
-                <div>
-                    <label>EN JP</label>
-                </div>
+                <ul class="menu">
+                    <li class="css-sprite-schedule">
+                        <a href="appointments.html"></a>
+                    </li>
+                    <li class="css-sprite-reserve">
+                        <a href="edit-appointment.html"></a>
+                    </li>
+                    <li class="css-sprite-setup">
+                        <a href="setup.html"></a>
+                    </li>
+                    <li class="css-sprite-room">
+                        <a href="create-appointment.html"></a>
+                    </li>
+                    <li class="css-sprite-manual">
+                        <a href="page-not-found.html"></a>
+                    </li>
+                    <li class="mt-lg-3 css-sprite-top" >
+                        <a href="#top"></a>
+                    </li>
+                    <li class="css-sprite-logout">
+                        <a href="logout.html"></a>
+                    </li>
+                    <li  class="mr-4">
+                        <label>EN JP</label>
+                    </li>
+                </ul>
+
             </div>
 
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+            <main  class="content-wrapper col-md-12 ml-sm-auto col-lg-10 pt-3 px-4">
                 <div class="container-fluid">
                     <h1 class="display-1 text-center text-white">
                         Welcome!

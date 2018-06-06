@@ -1,0 +1,57 @@
+ul li{
+    list-style: none;
+}
+
+
+
+ul.menu li a {
+    background: url("../../../images/css-sprite-combined.png.png") no-repeat;
+    display: inline-block;
+    /*width: 208px;*/
+    /*height:63px;*/
+    /*text-align: center;*/
+
+}
+ul.menu li.css-sprite-schedule a {
+    background-position:  -1px 0px;
+}
+ul.menu li.css-sprite-schedule a:hover {
+    background-position: -1px -63px;
+}
+ul.menu li.css-sprite-reserve a {
+    background-position: -1px -126px;
+}
+ul.menu li.css-sprite-reserve a:hover {
+    background-position: -1px -189px;
+}
+ul.menu li.css-sprite-setup a {
+    background-position: -1px -252px;
+}
+ul.menu li.css-sprite-setup a:hover {
+    background-position: -1px -315px;
+}
+ul.menu li.css-sprite-room a {
+    background-position: -1px -378px;
+}
+ul.menu li.css-sprite-room a:hover {
+    background-position: -1px -441px;
+}
+ul.menu li.css-sprite-manual a {
+    background-position: -0px -504px;
+}
+ul.menu li.css-sprite-manual a:hover {
+    background-position: -0px -568px;
+}
+ul.menu li.css-sprite-top a {
+    background-position:  -0px -632px;
+    margin-top: 50px;
+}
+ul.menu li.css-sprite-top a:hover {
+    background-position:  -0px -696px;
+}
+ul.menu li.css-sprite-logout a {
+    background-position: -1px -760px;
+}
+ul.menu li.css-sprite-logout a:hover {
+    background-position: -1px -823px;
+}

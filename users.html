@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Users</title>
-    <link rel="stylesheet" href="lib/bootstrap-4/css/bootstrap.css">
-    <link rel="stylesheet" href="lib/bootstrap-4/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="lib/bootstrap-4/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="lib/bootstrap-4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-4/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-4/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="lib/fontawesome-5/web-fonts-with-css/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="lib/bootstrap-4/css/style.css">
-    <style>
+    <link rel="stylesheet" href="lib/bootstrap-4/css/side.css">
 
-
-    </style>
+    <script type="text/javascript" src="lib/bootstrap-4/js/jquery-3.3.1.min.js  "></script>
+    <!-- Bootstrap Date-Picker Plugin -->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap-4/js/bootstrap.min.js  "></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
@@ -19,44 +24,49 @@
             <img src="images/navi_logo.gif">
         </div>
         <div>
-            <a class="navbar-toggler-icon" href="#"></a>
+            <a class="navbar-toggler-icon" data-toggle="collapse"  href="#demo"></a>
         </div>
         <div class="col-md-3 text-danger">User list</div>
     </nav>
     <div class="container-fluid">
-        <div class="side">
+        <div class="aside collapse show" id="demo">
             <div>
                 <a href="login.html"> <img src="images/login.gif"></a>
             </div>
-            <div class="image">
-                <a href="appointments.html"><img src="images/schedule.gif"></a>
-            </div>
-            <div class="image">
-                <a href="edit-appointment.html"><img src="images/reserve.gif"></a>
-            </div>
-            <div class="image">
-                <a href="setup.html"><img src="images/setup.gif"></a>
-            </div>
-            <div class="image">
-                <a href="create-appointment.html"><img src="images/room.gif"></a>
-            </div>
-            <div class="image">
-                <a href="page-not-found.html"><img src="images/manual_icon_white.gif"></a>
-            </div>
-            <div class="image" style="margin-top: 50px;">
-                <a href="#top"><img src="images/top1.gif"></a>
-            </div>
-            <div class="image" style="margin-bottom: 15px;">
-                <a href="logout.html"><img src="images/logout.gif"></a>
-            </div>
-            <div>
-                <label>EN JP</label>
-            </div>
+            <ul class="menu">
+                <li class="css-sprite-schedule">
+                    <a href="appointments.html"></a>
+                </li>
+                <li class="css-sprite-reserve">
+                    <a href="edit-appointment.html"></a>
+                </li>
+                <li class="css-sprite-setup">
+                    <a href="setup.html"></a>
+                </li>
+                <li class="css-sprite-room">
+                    <a href="create-appointment.html"></a>
+                </li>
+                <li class="css-sprite-manual">
+                    <a href="page-not-found.html"></a>
+                </li>
+                <li class="mt-lg-3 css-sprite-top" >
+                    <a href="#top"></a>
+                </li>
+                <li class="css-sprite-logout">
+                    <a href="logout.html"></a>
+                </li>
+                <li  class="mr-4">
+                    <label>EN JP</label>
+                </li>
+            </ul>
+
         </div>
+
+
         <div class="row">
-            <main class="col-md-10" style="margin-top: 10px; margin-left: 190px">
+            <main class="content-wrapper col-md-10 mt-2">
                 <div class="wrapper">
-                    <div class="col-sm-11">
+                    <div class="col-sm-12">
                         <table class="table table-bordered table-dark text-center">
                             <thead>
                             <tr>
